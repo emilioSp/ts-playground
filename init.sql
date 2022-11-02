@@ -1,5 +1,5 @@
-SELECT 'CREATE DATABASE my_table'
-WHERE NOT EXISTS (SELECT * FROM pg_database WHERE datname = 'my_table');
+SELECT 'CREATE DATABASE mydb'
+WHERE NOT EXISTS (SELECT * FROM pg_database WHERE datname = 'mydb');
 
 CREATE TABLE IF NOT EXISTS accounts (
 	user_id serial PRIMARY KEY,
