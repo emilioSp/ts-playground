@@ -13,5 +13,7 @@ export const getAccounts = async (): Promise<Account[]> => {
 
 export const getAccount = async (id: number): Promise<Account> => {
   const row = await pgDB.select().from<Account>('accounts').where('user_id', '=', id);
-  return row[0];
+  if (row[0]) return row[0];
+  
+  throw new Error('account not found');
 }

@@ -15,3 +15,7 @@ t.test('should return account in the db with id = 1', async () => {
   const result = await getAccount(1);
   t.same(result, { user_id: 1, name: 'Emilio', email: 'emilio@tiscali.it' });
 });
+
+t.test('should throw an error', async () => {
+  t.rejects(getAccount(1000), 'account not found');
+});
