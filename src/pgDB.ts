@@ -1,4 +1,4 @@
-import { Knex, knex } from 'knex';
+import knex, { Knex } from 'knex';
 
 const dbConfig: Knex.Config = {
   client: 'pg',

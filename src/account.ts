@@ -1,4 +1,4 @@
-import pgDB from "./pgDB";
+import pgDB from "./pgDB.js";
 
 type Account = {
   readonly account_id: number,

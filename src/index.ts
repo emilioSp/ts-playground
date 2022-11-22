@@ -1,6 +1,4 @@
-import { getAccounts } from './account';
+import { getAccounts } from "./account.js";
 
-(async () => {
-  const accounts = await getAccounts();
-  console.log(accounts);
-})();
+const accounts = await getAccounts();
+console.log(accounts);

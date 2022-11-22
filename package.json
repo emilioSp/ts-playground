@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node --require ts-node/register ./src/index.ts",
+    "start": "node --loader ts-node/esm --experimental-specifier-resolution=node ./src/index.ts",
+    "start-ts-node": "ts-node-esm ./src/index.ts",
     "test": "tap --ts --node-arg=--require=ts-node/register"
   },
   "author": "",
